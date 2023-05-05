@@ -82,6 +82,13 @@
       <!-- Retrieve the contents listed in the file codepkg/package.xml into the codepkg directory -->
       <sf:retrieve username="${sf.username}" password="${sf.password}" sessionId="${sf.sessionId}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" retrieveTarget="codepkg" unpackaged="codepkg/package.xml"/>
     </target>
+    
+    <!--Deploy Process-->
+     <target name="deploy">
+
+          <sf:deploy username="${sf.username}" password="${sf.password}" sessionId="${sf.sessionId}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" deployRoot="removecodepkg"/>
+
+  </target>
 
     <!-- Shows deploying code, running all tests, and running tests (1 of which fails), and logging. -->
     <target name="deployCodeFailingTest">
