@@ -84,7 +84,7 @@
     </target>
     
     <!--Deploy Process-->
-     <target name="deploycode">
+     <target name="deploy">
 
           <sf:deploy username="${sf.username}" password="${sf.password}" sessionId="${sf.sessionId}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" deployRoot="removecodepkg"/>
 
