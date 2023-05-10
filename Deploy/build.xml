@@ -11,10 +11,8 @@
     <condition property="sf.password" value=""> <not> <isset property="sf.password"/> </not> </condition>
     <condition property="sf.sessionId" value=""> <not> <isset property="sf.sessionId"/> </not> </condition>
 
-<taskdef resource="com/salesforce/antlib.xml"
-    classPath="${ant.library.dir}/ant-salesforce.jar"
-    uri="antlib:com.salesforce">
-            <classpath>
+    <taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce">
+        <classpath>
             <pathelement location="../ant-salesforce.jar" />        	
         </classpath>
     </taskdef>
