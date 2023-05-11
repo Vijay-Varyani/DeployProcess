@@ -88,8 +88,10 @@
     <!--Deploy Process-->
      <target name="deploy">
 
-          <sf:deploy username="${sf.username}" password="${sf.password}" sessionId="${sf.sessionId}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" deployRoot="removecodepkg"/>
-
+<sf:deploy username="${sf.username}" password="${sf.password}" 
+             sessionId="${sf.sessionId}" serverurl="${sf.serverurl}" 
+             maxPoll="600" deployRoot="../src/classes" rollbackOnError="true" 
+             allowMissingFiles="true" pollWaitMillis="30000"/>
   </target>
 
     <!-- Shows deploying code, running all tests, and running tests (1 of which fails), and logging. -->
